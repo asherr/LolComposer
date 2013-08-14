@@ -1,4 +1,10 @@
 module LolComposer
+
+    attr_accessor :roster
+    def init 
+        @roster = ChampBuilder.new('data/champions.yml').build
+    end
+
 	class ChampBuilder
         attr_accessor :roster, :champions
 		def initialize yml
@@ -39,39 +45,46 @@ module LolComposer
 
 end
 
-describe LolComposer::Champion do
+describe LolComposer do 
 
-	let(:champ) {LolComposer::Champion.new}
+    describe LolComposer::Champion do
 
-	it "stores a champ name" do
-		champ.name = "Aatrox"
-		expect(champ.name).to eq "Aatrox"
-	end
+    	let(:champ) {LolComposer::Champion.new}
 
-	it "stores a list of lanes" do
-		champ.lane = ['top', 'jungle']
-		expect(champ.lane).to eq ["top", "jungle"]
-	end
+    	it "stores a champ name" do
+    		champ.name = "Aatrox"
+    		expect(champ.name).to eq "Aatrox"
+    	end
 
-end
+    	it "stores a list of lanes" do
+    		champ.lane = ['top', 'jungle']
+    		expect(champ.lane).to eq ["top", "jungle"]
+    	end
 
-describe LolComposer::ChampBuilder do
-
-	let(:builder) {LolComposer::ChampBuilder.new 'data/champions.yml'}
-
-	it "reads the champions.yml into a hash" do
-		builder.champions
-	end
-
-    it "builds a champion object from champions.yml" do
-        champ = builder.buildOne 'Aatrox'
-        expect(champ.name).to eq 'Aatrox'
-        #puts champ.lane
     end
 
-    it "builds every champ" do
-        builder.build
-        puts builder.roster
+    describe LolComposer::ChampBuilder do
+
+    	let(:builder) {LolComposer::ChampBuilder.new 'data/champions.yml'}
+
+    	it "reads the champions.yml into a hash" do
+    		builder.champions
+    	end
+
+        it "builds a champion object from champions.yml" do
+            champ = builder.buildOne 'Aatrox'
+            expect(champ.name).to eq 'Aatrox'
+            #puts champ.lane
+        end
+
+        it "builds every champ" do
+            builder.build
+            #3puts builder.roster
+        end
+
     end
 
+     it "creates a list of champions" do
+        LolComposer.init
+    end 
 end

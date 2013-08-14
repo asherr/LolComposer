@@ -1,5 +1,5 @@
 require "lolcomposer/version"
 
-module Lolcomposer
+module LolComposer
   # Your code goes here...
 end
