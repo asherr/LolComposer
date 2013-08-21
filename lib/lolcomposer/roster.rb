@@ -17,19 +17,20 @@ module LolComposer
             @support = fetch_lane('support')
         end
 
+        def find_by_name(champ_name)
+            champs.each do |champ|
+                if champ.name = champ_name
+                    return champ
+                end
+            end
+        end
+        
         def fetch_lane(lane) 
             champs.map { |c| c if c.lane.include?(lane) }.compact
         end
 
-        def build_rand_team
-            rng = Random.new
-            team = []
-            team << @top.compact[rng.rand(@top.length)]
-            team << @jungle.compact[rng.rand(@jungle.length)]
-            team << @mid.compact[rng.rand(@mid.length)]
-            team << @adc.compact[rng.rand(@adc.length)]
-            team << @support.compact[rng.rand(@support.length)]
-            return team
+        def random_by_lane(lane)
+            __send__(lane)[rand(__send__(lane).length)]
         end
     end
 end

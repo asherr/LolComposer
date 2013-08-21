@@ -6,20 +6,39 @@ describe LolComposer::Team do
     let(:roster) { roster = LolComposer::Roster.new(LolComposer::ChampBuilder.build) }
     
     it "should store a list of five champions" do
-        team = LolComposer::Team.new
-        team.top = roster.top.first
-        team.jungle = roster.jungle.first
-        team.mid = roster.mid.first
-        team.adc = roster.adc.first
-        team.support = roster.support.first
+        comp = LolComposer::Team.new
+        comp.team[:top] = roster.top.first
+        comp.team[:jungle] = roster.jungle.first
+        comp.team[:mid] = roster.mid.first
+        comp.team[:adc] = roster.adc.first
+        comp.team[:support] = roster.support.first
 
-        expect(team.top.name).to eq "Aatrox"
+        expect(comp.team[:top].name).to eq "Aatrox"
     end
 
-    it "should assign a lane to a champion" do
-        team = LolComposer::Team.new
-        team.assign_lane(roster.champs.first)
+    it "should create a team with one champ per lane" do
+        comp = LolComposer::Team.new
+        comp.build_rand_team
+        #puts comp
+    end
 
-        expect(team.top.name).to eq "Aatrox"
+
+    describe "#fill_with_rand" do
+
+        it "should any empty lanes with champs" do
+            team = LolComposer::Team.new 
+            team.fill_with_rand
+          #  puts team
+        end
+    end
+
+    describe "#build_from_champion" do
+
+        it "should make a team from a single champion" do
+            team = LolComposer::Team.new 
+            team.build_from_champion(['Swain'])
+            puts team
+        end
+
     end
 end
