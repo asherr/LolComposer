@@ -1,3 +1,5 @@
+require 'pry'
+
 module LolComposer 
     class Roster
         attr_accessor :champs, :top, :jungle, :mid, :adc, :support
@@ -17,6 +19,17 @@ module LolComposer
 
         def fetch_lane(lane) 
             champs.map { |c| c if c.lane.include?(lane) }.compact
+        end
+
+        def build_rand_team
+            rng = Random.new
+            team = []
+            team << @top.compact[rng.rand(@top.length)]
+            team << @jungle.compact[rng.rand(@jungle.length)]
+            team << @mid.compact[rng.rand(@mid.length)]
+            team << @adc.compact[rng.rand(@adc.length)]
+            team << @support.compact[rng.rand(@support.length)]
+            return team
         end
     end
 end
