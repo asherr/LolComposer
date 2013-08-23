@@ -19,7 +19,7 @@ module LolComposer
 
         def find_by_name(champ_name)
             champs.each do |champ|
-                if champ.name = champ_name
+                if champ.name == champ_name
                     return champ
                 end
             end

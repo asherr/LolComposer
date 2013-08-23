@@ -16,11 +16,14 @@ module LolComposer
         end
 
         def assign_lane(champ_name)
-            lane_name = @roster.find_by_name(champ_name).lane.first
-            #__send__("#{champ.lane.first}=", champ) 
+            lane_list = @roster.find_by_name(champ_name).lane
+            lane_list.each do |lane|
+                if @team[lane.to_sym].champ.nil?
+                    return lane.to_sym
+                end
+            end
         end
  
-
         def build_rand_team
            fill_with_rand
         end

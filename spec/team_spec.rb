@@ -22,7 +22,6 @@ describe LolComposer::Team do
         #puts comp
     end
 
-
     describe "#fill_with_rand" do
 
         it "should any empty lanes with champs" do
@@ -34,11 +33,31 @@ describe LolComposer::Team do
 
     describe "#build_from_champion" do
 
+        let(:team) { LolComposer::Team.new }
+
         it "should make a team from a single champion" do
-            team = LolComposer::Team.new 
             team.build_from_champion(['Swain'])
+            #puts team
+        end
+
+        it "should make a team from a partially filled team" do
+            team.build_from_champion(['Swain', 'Aatrox', 'DrMundo'])
             puts team
         end
 
     end
+
+    describe "#assign_lane" do
+
+        it "should return an empty lane for a champion" do
+            comp = LolComposer::Team.new 
+            comp.team[:top].champ = roster.top.first
+
+            expect(comp.team[:top].champ.name).to eq "Aatrox"
+
+            lane = comp.assign_lane("Swain")
+            expect(lane).to eq :mid
+        end
+    end
+
 end
