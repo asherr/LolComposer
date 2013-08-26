@@ -22,6 +22,12 @@ module LolComposer
                     return lane.to_sym
                 end
             end
+            #if no good lanes are left, put the champ anywhere
+            [:top, :jungle, :mid, :adc, :support].each do |lane|
+                if @team[lane].champ.nil?
+                    return lane
+                end
+            end
         end
  
         def build_rand_team
@@ -31,13 +37,25 @@ module LolComposer
         def fill_with_rand
             @team.each_pair do |lane_name, lane|
                 if lane.champ.nil?
-                    fill_lane(lane_name)
+                    fill_lane(lane_name) 
                 end
             end
         end
 
         def fill_lane(lane_name)
-            @team[lane_name].champ = @roster.random_by_lane(lane_name)
+            champ = @roster.random_by_lane(lane_name)
+            if is_dupe(champ)
+                fill_lane(lane_name)
+            else
+                @team[lane_name.to_sym].champ = champ
+            end
+        end
+
+        def is_dupe(champ)
+            @team.keys.each do |lane|
+                return true if @team[lane].champ == champ
+            end
+            false
         end
 
         def build_from_champion(champ_names)

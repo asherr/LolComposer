@@ -41,7 +41,7 @@ describe LolComposer::Team do
         end
 
         it "should make a team from a partially filled team" do
-            team.build_from_champion(['Swain', 'Aatrox', 'DrMundo'])
+            team.build_from_champion(['Swain', 'Aatrox', 'DrMundo', 'Zed'])
             puts team
         end
 
@@ -60,4 +60,30 @@ describe LolComposer::Team do
         end
     end
 
+    describe "#fill_lane" do
+
+        it "should handle duplicate champions" do
+            comp = LolComposer::Team.new
+            comp.team[:adc].champ = roster.find_by_name('Quinn')
+
+            expect(comp.fill_lane('adc')).not_to eq 'Quinn'
+        end    
+    end
+
+    describe "#is_dupe" do
+
+        it "should return true if champ is duplicate" do
+            comp = LolComposer::Team.new
+            comp.team[:adc].champ = roster.find_by_name('Quinn')
+
+            expect(comp.is_dupe(roster.find_by_name('Quinn'))).to eq true
+        end
+
+         it "should return false if champ isn't a duplicate" do
+            comp = LolComposer::Team.new
+            comp.team[:adc].champ = roster.find_by_name('Aatrox')
+
+            expect(comp.is_dupe(roster.find_by_name('Quinn'))).to eq false
+        end
+    end
 end
