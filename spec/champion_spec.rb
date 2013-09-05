@@ -14,4 +14,8 @@ describe LolComposer::Champion do
         expect(champ.lane).to eq ["top", "jungle"]
     end
 
+    it "stores a list of roles" do
+        champ.role = ['bully', 'sustain', 'push']
+        expect(champ.role).to eq ["bully", "sustain", "push"]
+    end
 end
