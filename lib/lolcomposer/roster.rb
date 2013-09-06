@@ -5,7 +5,6 @@ module LolComposer
         attr_accessor :champs, :top, :jungle, :mid, :adc, :support
         def initialize(champs) 
             @champs = champs
-            # @top, @jungle, @mid, @adc, @support = [], [], [], [], []
             build_lanes
         end
             
@@ -32,5 +31,16 @@ module LolComposer
         def random_by_lane(lane)
             __send__(lane)[rand(__send__(lane).length)]
         end
+
+        def find_champ_by_role(role)
+            champ_list = []
+            @champs.each do |champ|
+                if champ.role.include?(role)
+                    champ_list << champ
+                end
+            end
+            champ_list
+        end
+
     end
 end

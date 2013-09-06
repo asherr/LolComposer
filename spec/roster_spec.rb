@@ -12,5 +12,9 @@ describe LolComposer::Roster do
         #puts roster.support.map(&:name)
     end
 
-    
+    it "should fetch a champion based on its role and lane" do
+        roster = LolComposer::Roster.new(LolComposer::ChampBuilder.build)
+        champs = roster.find_champ_by_role("engage")
+        champs.each do |champ| puts champ.name end
+    end
 end
