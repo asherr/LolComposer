@@ -3,111 +3,230 @@ Aatrox:
         - top
         - jungle
         - mid
+    role:
+        - bully
+        - sustain
+        - push
 Ahri:
     lane:
         - mid
+    role:
+        - push
+        - pick
+        - mobile
+        - burst
 Akali:
     lane:
         - mid
         - top
+    role:
+        - burst
+        - utility
 Alistar:
     lane:
         - support
         - jungle
+    role:
+        - tank
+        - engage
+        - disengage
+        - sustain
 Amumu:
     lane:
         - jungle
+    role:
+        - utility
+        - engage
+        - aoe
+        - tank
+        - pick
 Anivia:
     lane:
         - mid
+    role:
+        - push
+        - aoe
+        - disengage
+        - utility
 Annie:
     lane:
         - mid
         - support
+    role:
+        - burst
+        - aoe
 Ashe: 
     lane:
         - adc
+    role:
+        - utility
 Blitzcrank:
     lane:
         - support
+    role:
+        - pick
+        - burst
+        - bully
 Brand:
     lane:
         - mid
+    role:
+        - aoe
+        - burst
+        - push
 Caitlyn:
     lane:
         - adc
+    role:
+        - poke
+        - bully
+        - push
 Cassiopeia:
     lane:
         - mid
+    role:
+        - aoe
+        - burst
+        - disengage
 ChoGath:
     lane:
         - jungle
         - top
         - mid
+    role:
+        - tank
+        - utility
+        - burst
+        - aoe
+        - disengage
 Corki:
     lane:
         - adc
+    role:
+        - mobile
+        - poke
+        - aoe
 Darius:
     lane:
         - top
         - jungle
+    role:
+        - burst
+        - bully
 Diana:
     lane:
         - mid
         - jungle
+    role:
+        - mobile
+        - burst
+        - push
 Draven:
     lane:
         - adc
+    role:
+        - bully
 DrMundo:
     lane:
         - jungle
         - top
+    role:
+        - tank
+        - sustain
+        - poke
 Elise:
     lane:
         - jungle
         - top
         - support
+    role:
+        - bully
+        - mobile
+        - utility
+        - burst
+        - pick
+        - tank
 Evelynn:
     lane:
         - jungle
         - mid
+    role:
+        - utility
+        - bully
+        - burst
 Ezreal:
     lane:
         - adc
         - mid
+    role:
+        - poke
+        - mobile
 Fiddlesticks:
     lane:
         - jungle
         - support
         - mid
+    role:
+        - aoe
+        - utility
 Fiora:
     lane:
         - top
         - mid
+    role:
+        - bully
+        - aoe
 Fizz:
     lane:
         - mid
         - top
+    role:
+        - mobile
+        - burst
 Galio:
     lane:
         - mid
+    role:
+        - aoe
+        - utility
+        - tank
 Gangplank:
     lane:
         - top
         - mid
+    role:
+        - bully
+        - push
 Garen:
     lane:
         - top
+    role:
+        - tank
+        - bully
+        - burst
 Gragas:
     lane:
         - mid
         - jungle
+    role:
+        - poke
+        - aoe
 Graves:
     lane:
         - adc
+    role:
+        - burst
+        - mobile
+        - aoe
+        - push
 Hecarim:
     lane:
         - jungle
+    role:
+        - engage
+        - tank
+        - mobile
+        - aoe
 Heimerdinger:
     lane:
         - mid
@@ -115,305 +234,661 @@ Heimerdinger:
         - support
         - adc
         - jungle
+    role:
+        - mobile
+        - tank
+        - engage
+        - disengage
+        - burst
+        - aoe
+        - utility
+        - sustain
+        - bully
+        - pick
 Irelia:
     lane:
         - top
+    role:
+        - tank
+        - mobile
+        - bully
+        - sustain
 Janna:
     lane:
         - support
         - mid
+    role:
+        - utility
+        - disengage
 JarvanIV:
     lane:
         - jungle
         - top
         - mid
+    role:
+        - tank
+        - mobile
+        - engage
 Jax:
     lane:
         - top
         - jungle
+    role:
+        - bully
+        - burst
 Jayce:
     lane:
         - top
         - mid
+    role:
+        - poke
+        - mobile
+        - push
 Karma:
     lane:
         - support
         - top
         - mid
+    role:
+        - mobile
+        - utility
 Karthus:
     lane:
         - mid
+    role:
+        - aoe
+        - push
+        - engage
 Kassadin:
     lane:
         - mid
+    role:
+        - mobile
+        - burst
+        - aoe
 Katarina:
     lane:
         - mid
         - top
+    role:
+        - mobile
+        - burst
 Kayle:
     lane:
         - mid
         - top
         - jungle
+    role:
+        - utility
+        - sustain
+        - bully
 Kennen:
     lane:
         - top
         - mid
+    role:
+        - engage
+        - mobile
+        - bully
 KhaZix:
     lane:
         - mid
         - top
         - jungle
+    role:
+        - burst
+        - mobile
+        - sustain
+        - push
 KogMaw:
     lane:
         - adc
         - mid
+    role:
+        - poke
 LeBlanc:
     lane:
         - mid
+    role:
+        - mobile
+        - burst
 LeeSin:
     lane:
         - jungle
         - top
         - mid
+    role:
+        - mobile
+        - utility
+        - bully
+        - sustain
 Leona:
     lane:
         - support
+    role:
+        - engage
+        - burst
+        - utility
 Lissandra:
     lane:
         - mid
         - top
+    role:
+        - engage
+        - utility
+        - mobile
+        - burst
+        - aoe
 Lulu:
     lane:
         - support
         - mid
+    role:
+        - utility
+        - disengage
+        - push
 Lux:
     lane:
         - mid
         - support
+    role:
+        - burst
+        - pick
+        - aoe
+        - poke
 Malphite:
     lane:
         - top
         - mid
         - jungle
+    role:
+        - tank
+        - engage
 Malzahar:
     lane:
         - mid
+    role:
+        - pick
 Maokai:
     lane:
         - jungle
+    role:
+        - utility
+        - tank
+        - engage
 MasterYi:
     lane:
         - mid
         - jungle
         - top
+    role:
+        - mobile
+        - bully
+        - push
 MissFortune:
     lane:
         - adc
+    role:
+        - bully
+        - aoe
 Mordekaiser:
     lane:
         - mid
         - top
+    role:
+        - aoe
+        - burst
+        - push
 Morgana:
     lane:
         - mid
         - support
+    role:
+        - aoe
+        - utility
+        - pick
 Nami:
     lane:
         - support
+    role:
+        - disengage
+        - utility
+        - sustain
 Nasus:
     lane:
         - jungle
         - top
+    role:
+        - tank
+        - utility
+        - push
 Nautilus:
     lane:
         - jungle
+    role:
+        - tank
+        - engage
+        - utility
 Nidalee:
     lane:
         - top
         - mid
+    role:
+        - mobile
+        - poke
+        - bully
+        - push
+        - sustain
 Nocturne:
     lane:
         - jungle
+    role:
+        - mobile
+        - tank
+        - pick
+        - engage
 Nunu:
     lane:
         - jungle
         - support
+    role:
+        - bully
+        - sustain
+        - utility
 Olaf:
     lane:
         - top
+    role:
+        - tank
+        - bully
+        - push
 Orianna:
     lane:
         - mid
+    role:
+        - utility
+        - engage
+        - burst
+        - aoe
 Pantheon:
     lane:
         - top
         - mid
         - jungle
+    role:
+        - mobile
+        - burst
+        - bully
 Poppy:
     lane:
         - top
+    role:
+        - burst
+        - tank
 Quinn:
     lane:
         - adc
         - mid
         - top
+    role:
+        - burst
+        - mobile
 Rammus:
     lane:
         - jungle
+    role:
+        - mobile
+        - pick
+        - tank
 Renekton:
     lane:
         - top
+    role:
+        - bully
+        - mobile
+        - push
 Rengar:
     lane:
         - top
         - mid
         - jungle
+    role:
+        - bully
+        - mobile
+        - pick 
+        - burst
 Riven:
     lane:
         - top
         - mid
+    role:
+        - bully
+        - push
+        - mobile
 Rumble:
     lane:
         - top
         - mid
+    role:
+        - bully
+        - engage
+        - disengage
+        - aoe
 Ryze:
     lane:
         - mid
         - top
+    role:
+        - push
+        - engage
+        - aoe
 Sejuani:
     lane:
         - jungle
+    role:
+        - engage
+        - utility
+        - tank
 Shaco:
     lane:
         - jungle
+    role:
+        - push
+        - mobile
+        - pick
+        - bully
 Shen:
     lane:
         - top
         - jungle
+    role:
+        - push
+        - tank
+        - sustain
+        - utility
 Shyvana:
     lane:
         - jungle
+    role:
+        - mobile
+        - engage
+        - bully
+        - push
 Singed:
     lane:
         - top
+    role:
+        - push
+        - tank
+        - bully
 Sion:
     lane:
         - top
         - mid
+    role:
+        - push
+        - tank
+        - burst
 Sivir:
     lane:
         - adc
+    role:
+        - mobile
+        - utility
+        - push
 Skarner:
     lane:
         - jungle
+    role:
+        - pick
+        - tank
 Sona:
     lane:
         - support
+    role:
+        - bully
+        - engage
+        - disengage
+        - sustain
+        - utility
+        - aoe
 Soraka:
     lane:
         - support
+    role:
+        - sustain
+        - utility
 Swain:
     lane:
         - mid
         - top
+    role:
+        - sustain
+        - bully
+        - aoe
 Syndra:
     lane:
         - mid
+    role:
+        - burst
+        - pick
 Talon:
     lane:
         - mid
         - top
+    role:
+        - burst
+        - mobile
+        - aoe
 Taric:
     lane:
         - support
         - jungle
+    role:
+        - utility
+        - tank
+        - burst
+        - pick
 Teemo:
     lane: 
         - top
+    role:
+        - push
+        - bully
+        - mobile
+        - utility
 Thresh:
     lane:
         - support
+    role:
+        - pick
+        - engage
+        - bully
+        - utility
 Tristana:
     lane:
         - adc
+    role:
+        - mobile
+        - push
+        - engage
 Trundle:
     lane:
         - jungle
         - top
+    role:
+        - tank
+        - sustain
+        - disengage
+        - pick
 Tryndamere:
     lane:
         - top
         - jungle
+    role:
+        - sustain
+        - push
+        - bully
+        - mobile
 TwistedFate:
     lane:
         - mid
+    role:
+        - mobile
+        - pick
+        - burst
+        - push
+        - poke
 Twitch:
     lane:
         - adc
+    role:
+        - mobile
+        - pick
+        - aoe
 Udyr:
     lane:
         - jungle
         - top
+    role:
+        - bully
+        - mobile
+        - tank
+        - sustain 
 Urgot:
     lane:
         - adc
+    role:
+        - bully
+        - pick
+        - poke
 Varus:
     lane:
         - adc
+    role:
+        - utility
+        - pick
 Vayne:
     lane:
         - adc
+    role:
+        - mobile
+        - bully
+        - pick
 Veigar:
     lane:
         - mid
+    role:
+        - burst
 Vi:
     lane:
         - jungle
+    role:
+        - engage
+        - bully
+        - pick
 Viktor:
     lane:
         - mid
+    role:
+        - poke
+        - burst
+        - aoe
+        - utility
 Vladimir:
     lane:
         - mid
         - top
+    role:
+        - sustain
+        - aoe
+        - push
 Volibear:
     lane:
         - jungle
+    role:
+        - tank
+        - bully
+        - engage
 Warwick:
     lane:
         - jungle
         - top
+    role:
+        - sustain
+        - pick
+        - tank
 Wukong:
     lane:
         - top
+    role:
+        - bully
+        - engage
+        - mobile
 Xerath:
     lane:
         - mid
+    role:
+        - poke
+        - aoe
+        - burst
 XinZhao:
     lane:
         - jungle
         - top
+    role:
+        - engage
+        - tank
+        - sustain
 Yorick:
     lane:
         - top
+    role:
+        - bully
+        - sustain
+        - tank
 Zac:
     lane:
         - jungle
         - top
         - mid
+    role:
+        - engage
+        - tank
+        - mobile
+        - utility
+        - sustain
 Zed:
     lane:
         - mid
         - top
+    role:
+        - mobile
+        - burst
+        - bully
+        - pick
+        - push
 Ziggs:
     lane:
         - mid
+    role:
+        - aoe
+        - burst
+        - poke
 Zilean:
     lane:
         - mid   
         - support
+    role:
+        - utility
+        - bully
+        - mobile
 Zyra:
     lane:
         - support
         - mid
+    role:
+        - disengage
+        - aoe
+        - utility
+        - push
