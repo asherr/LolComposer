@@ -1,3 +1,4 @@
+require 'pry'
 module LolComposer 
     class ChampBuilder
 
@@ -9,7 +10,7 @@ module LolComposer
             champions = parse
             roster = []
             champions.each do |key, value|
-                roster << LolComposer::Champion.new(key, value["lane"])
+                roster << LolComposer::Champion.new(key, value["lane"], value["role"])
             end
             roster
         end
