@@ -66,6 +66,36 @@ module LolComposer
             fill_with_rand
         end
 
+        def build_from_single_role(role)
+            champ_list = @roster.find_by_role(role)
+            fill_from_list(champ_list)
+        end
+
+        def fill_from_list (champ_list) 
+            #cycle through each of the 5 lanes
+            @team.keys.each do |lane|
+                lane_list = []
+                #fill the lane list with champions from champ list
+                champ_list.each do |champ|
+                    if champ.lane.include?(lane.to_s)
+                        lane_list << champ
+                    end
+                end
+                #select a random champion from lane list
+                @team[lane].champ = lane_list[rand(lane_list.length)]
+            end
+        end
+
+        def sort_by_lane(clist, lane)
+            lane_list = []
+            clist.each do |champ|
+                if champ.lane.include?(lane)
+                    lane_list << champ
+                end
+            end
+            lane_list
+        end
+
         def to_s
             s = ( team[:top].champ.name + "\n" + team[:jungle].champ.name + "\n" + team[:mid].champ.name + "\n" + 
                   team[:adc].champ.name + "\n" + team[:support].champ.name )

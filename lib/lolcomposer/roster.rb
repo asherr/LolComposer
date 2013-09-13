@@ -32,7 +32,7 @@ module LolComposer
             __send__(lane)[rand(__send__(lane).length)]
         end
 
-        def find_champ_by_role(role)
+        def find_by_role(role)
             champ_list = []
             @champs.each do |champ|
                 if champ.role.include?(role)

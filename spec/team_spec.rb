@@ -86,4 +86,28 @@ describe LolComposer::Team do
             expect(comp.is_dupe(roster.find_by_name('Quinn'))).to eq false
         end
     end
+
+    describe "#fill_from_list" do
+
+        it "should create a team out of a list of champs" do
+            comp = LolComposer::Team.new
+            comp.fill_from_list(roster.find_by_role("mobile"))
+            puts comp
+        end
+    end
+
+    describe "#sort_by_lane" do
+
+        it "should return a list of champs that work in a lane from a list of champions" do
+            comp = LolComposer::Team.new
+            mid_list = comp.sort_by_lane(roster.find_by_role("engage"), "mid")
+            # mid_list.each do |c| puts c.name end
+        end
+    end
+
+    it "should fill a team centered around a single role" do
+        comp = LolComposer::Team.new
+        comp.build_from_single_role("engage")
+        puts comp
+    end
 end

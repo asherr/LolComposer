@@ -7,6 +7,7 @@ require "lolcomposer/champion"
 require "lolcomposer/roster"
 require "lolcomposer/team"
 require "lolcomposer/lane"
+require "lolcomposer/team_builder"
 
 module LolComposer
 
